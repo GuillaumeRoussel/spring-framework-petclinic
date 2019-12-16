@@ -33,6 +33,11 @@ public class BaseEntity {
     protected Integer id;
 
     public Integer getId() {
+        int target = -5;
+        int num = 3;
+
+        target =- num;  // Noncompliant; target = -3. Is that really what's meant?
+        target =+ num; // Noncompliant; target = 3
         return id;
     }
 
